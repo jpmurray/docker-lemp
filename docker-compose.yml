@@ -38,7 +38,7 @@ services:
     ports:
       - 8010:80
     volumes:
-      - ./:/var/www
+      - ../:/var/www/
       - ./docker/nginx:/etc/nginx/conf.d/
     networks:
       - LEMPNetwork
