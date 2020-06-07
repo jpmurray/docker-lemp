@@ -32,6 +32,10 @@ services:
     networks:
       - LEMPNetwork
 
+  redis:
+    image: redis:alpine
+    restart: unless-stopped
+
   nginx:
     image: nginx:1.17-alpine
     restart: unless-stopped
