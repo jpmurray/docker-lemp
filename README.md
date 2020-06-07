@@ -10,20 +10,26 @@ This is rocking:
 
 ## Usage
 
-What I want is something I can add as a submodule to existing project. So you probably saftely do it on your end too.
+### Running from your project's root
 
-Once it's done, make sure you have your `.env` file, run `docker-compose up -d` then, if applicable to your usage: `docker-compose --project-directory=./docker-lemp exec app php artisan storage:link && docker-compose --project-directory=./docker-lemp exec app php artisan key:generate`.
+If you are running commands from the `docker-lemp` directory, there's nothing special to do. But most of the time, we do run those from the project's root. If you do so, you should be running them like so:
+
+`docker-compose -f ./docker-lemp/docker-compose.yml <your command>`
+
+This readme takes for granted that your understand this, so it'll not be adding it to all the commands listed.
+
+### Installation
+
+I wanted something that could be added as a submodule to an existing project. It's safe to assume that you could do it yourself too.
 
 Database user and password is set in `docker-compose.yml`, and your database host is `db`.
 
-## Running commands
+## Composer and artisan
 
-Otherwise, you can run commands from your root directory of your project:
+You can run composer and artisan command using the following:
 
-- Composer: `docker-compose --project-directory=./docker-lemp exec app composer <COMMAND>`
-- Artisan: `docker-compose --project-directory=./docker-lemp exec app php artisan <COMMAND>`
-
-If you run the commands from within `docker-lemp`'s folder, you can drop `--project-directory=./docker-lemp`.
+- Composer: `docker-compose exec app composer <COMMAND>`
+- Artisan: `docker-compose exec app php artisan <COMMAND>`
 
 ## Thanks
 
