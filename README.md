@@ -5,8 +5,9 @@ This is my Docker LEMP setup. My goal was having it run on a Raspberry Pi 4, so 
 This is rocking:
 
 - PHP 7.4
-- Maria DB
+- MariaDB
 - Nginx
+- Redis
 
 ## Usage
 
@@ -22,7 +23,11 @@ This readme takes for granted that your understand this, so it'll not be adding 
 
 I wanted something that could be added as a submodule to an existing project. It's safe to assume that you could do it yourself too.
 
-Database user and password is set in `docker-compose.yml`, and your database host is `db`.
+Database user and password is set in `docker-compose.yml`.
+
+Database host is `db`.
+
+Redis host is `redis`.
 
 ## Composer and artisan
 
