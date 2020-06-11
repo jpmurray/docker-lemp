@@ -23,7 +23,7 @@ This readme takes for granted that your understand this, so it'll not be adding 
 
 I wanted something that could be added as a submodule to an existing project. It's safe to assume that you could do it yourself too.
 
-Database user and password is set in `docker-compose.yml`.
+Database credentials and nginx port are set in a `.env` file. You should be copying `.env.example` to `.env` and change values accordingly.
 
 Database host is `db`.
 
